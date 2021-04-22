@@ -1,0 +1,27 @@
+shell: /bin/zsh
+
+root:
+  name: example
+  type: file
+  git:
+    repo: git@github.com:pydev/example.git
+    fullname: Nguyen Khac Thanh
+    readme: |
+      This is readme content
+    license: MIT
+    gitignore: python
+  nodes:
+  - name: dir
+    type: dir
+    nodes:
+    - name: file.txt
+      type: file
+      content: |
+        This is a stuff file
+preexc:
+  # Executable file
+  - pre.sh
+  - pre.py
+  - pre.js
+postexc:
+  # Look like preexc
